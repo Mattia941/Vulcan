@@ -3,4 +3,4 @@ version: 1.0
 main: it.dorayakimc.core.DorayakiCore
 api-version: '1.21'
 author: DorayakiMC
-description: Anti-Cheat per DorayakiMC
+description: Core Anti-Cheat personalizzato per DorayakiMC
