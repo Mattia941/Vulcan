@@ -1,0 +1,413 @@
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │   ᴠᴜʟᴄᴀɴ ᴀɴᴛɪ-ᴄʜᴇᴀᴛ · ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ ꜰɪʟᴇ                              │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+prefix: '&b&lᴅᴏʀᴀʏᴀᴋɪᴍᴄ &8»'
+
+alerts:  
+  format: '%prefix% &f%player% &7ha fallito &f%check% %dev%&7(&fᴛɪᴘᴏ %type%&7)%dev% &7[&4%vl%&7/&4%max-vl%&7]'
+  
+  hover-message:
+  - '&7ᴘɪɴɢ: &c%ping% &8| &7ᴛᴘꜱ: &c%tps% &8| &7ᴠᴇʀꜱɪᴏɴᴇ: &c%version% &8| &7ᴄʟɪᴇɴᴛ: &c%client-brand%'
+  - ''
+  - '&7ᴅᴇꜱᴄʀɪᴢɪᴏɴᴇ:'
+  - '&7%description%'
+  - ''
+  - '&7ɪɴꜰᴏʀᴍᴀᴢɪᴏɴɪ:'
+  - '&7%info%'
+  - ''
+  - '&7ᴄʟɪᴄᴄᴀ ᴘᴇʀ ᴛᴇʟᴇᴘᴏʀᴛᴀʀᴛɪ ᴀ &b%player%&7.'  
+
+  click-commands:
+  - '/vulcan clickalert %player%'  
+
+  click-alert-command-commands:
+  - 'tp %player%'  
+
+  toggled-on-message: '%prefix% &7ᴀᴠᴠɪꜱɪ ᴅɪ ᴠᴜʟᴄᴀɴ &aᴀᴛᴛɪᴠᴀᴛɪ&7!'  
+  toggled-off-message: '%prefix% &7ᴀᴠᴠɪꜱɪ ᴅɪ ᴠᴜʟᴄᴀɴ &cᴅɪꜱᴀᴛᴛɪᴠᴀᴛɪ&7!'  
+  print-to-console: true  
+  console-format: '[Vulcan] %player% ha fallito %check% %dev%(Tipo %type%)%dev% (%vl%/%max-vl%)'  
+
+  custom-commands: []  
+
+  severity:    
+    violations:      
+      2: 4 
+      3: 8 
+      4: 12 
+      5: 16 
+      6: 16 
+      7: 16 
+      8: 16 
+      9: 16 
+      10: 16 
+    colors: 
+      1: '&a' 
+      2: '&e' 
+      3: '&6' 
+      4: '&c' 
+      5: '&4' 
+      6: '&4' 
+      7: '&4' 
+      8: '&4' 
+      9: '&4' 
+      10: '&4'  
+
+  experimental-symbol: "*"
+
+verbose:  
+  format: '%prefix% &f%player% &7verbosed &f%check% &7(&f%type%&7) %dev% &7[&4%percent%%&7]'  
+  hover-message:
+  - '&7ᴘɪɴɢ: &c%ping% &8| &7ᴛᴘꜱ: &c%tps% &8| &7ᴠᴇʀꜱɪᴏɴᴇ: &c%version%'
+  - ''
+  - '&7ᴅᴇꜱᴄʀɪᴢɪᴏɴᴇ:'
+  - '&7%description%'
+  - ''
+  - '&7ʙᴜꜰꜰᴇʀ:'
+  - '&7%buffer%/%max-buffer%'
+  - ''
+  - '&7ᴄʟɪᴄᴄᴀ ᴘᴇʀ ᴛᴇʟᴇᴘᴏʀᴛᴀʀᴛɪ ᴀ &b%player%&7.'  
+  click-commands:
+  - '/tp %player%'  
+  toggled-on-message: '%prefix% &7ᴠᴇʀʙᴏꜱᴇ ᴅɪ ᴠᴜʟᴄᴀɴ &aᴀᴛᴛɪᴠᴀᴛᴏ&7!'  
+  toggled-off-message: '%prefix% &7ᴠᴇʀʙᴏꜱᴇ ᴅɪ ᴠᴜʟᴄᴀɴ &cᴅɪꜱᴀᴛᴛɪᴠᴀᴛᴏ&7!'
+
+log-file:  
+  enabled: true  
+  alert-message: "%player% ha fallito %check% %dev%(Tipo %type%)%dev% [VL: %vl%] [Ping: %ping%] [TPS: %tps%] [Versione: %version%]"  
+  punishment-message: "%player% è stato punito per %check% %dev%(Tipo %type%)%dev% [VL: %vl%] [Ping: %ping%] [TPS: %tps%]"
+
+punishment-file:  
+  enabled: true
+
+violation-reset:  
+  enabled: true  
+  interval-in-minutes: 8  
+  message-enabled: true  
+  message: '%prefix% &7Le violazioni per tutti i giocatori online sono state azzerate!'
+
+client-brand-alerts:  
+  resolve: true  
+  enabled: true  
+  ignore-alerts-list:
+  - 'vanilla'  
+  message: '%prefix% &c%player% &7è entrato usando &f%client-brand%&7!'  
+  blocked-client-brands: []  
+  unallowed-client-brand-kick-message: '&cNon puoi entrare con %client-brand%!'  
+  console: false  
+  console-message: '[Vulcan] %player% è entrato usando %client-brand%!'  
+  whitelist-enabled: false  
+  whitelisted-client-brands: []
+
+connection:  
+  transaction:    
+    kick-enabled: true    
+    max-delay: 45000    
+    kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'    
+    staff-alert-message: '%prefix% &c%player% &7è stato espulso per non aver risposto ai pacchetti Transaction! &7(&c%delay%ᴍꜱ&7)'    
+    console-message: '[Vulcan] &c%player% &7è stato espulso per non aver risposto ai pacchetti Transaction! &7(&c%delay%ᴍꜱ&7)'  
+  keepalive:    
+    kick-enabled: true    
+    max-delay: 45000    
+    kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'    
+    staff-alert-message: '%prefix% &c%player% &7è stato espulso per non aver risposto ai pacchetti KeepAlive! &7(&c%delay%ᴍꜱ&7)'    
+    console-message: '[Vulcan] &c%player% &7è stato espulso per non aver risposto ai pacchetti KeepAlive! &7(&c%delay%ᴍꜱ&7)'  
+  max-ping:    
+    kick-enabled: true    
+    max-ping: 20000    
+    max-ticks: 20    
+    kick-message: 'Internal Exception: io.netty.handler.timeout.ReadTimeoutException'    
+    staff-alert-message: '%prefix% &c%player% &7è stato espulso per ping troppo alto! &7(&c%ping%ᴍꜱ&7)'    
+    console-message: '[Vulcan] &c%player% &7espulso per ping troppo alto! &7(&c%ping%ᴍꜱ&7)'
+
+punishments:  
+  message: '%prefix% &c%player% &7è stato punito per &f%check% &7(&fᴛɪᴘᴏ %type%&7) &7[&4x%vl%&7]'  
+  broadcast:
+  - "&7&m---»--*-------------------------------------*--«---"
+  - "&bᴅᴏʀᴀʏᴀᴋɪᴍᴄ &7ha rilevato che &c%player% &7stava usando cheat e lo ha rimosso dal network."
+  - "&7&m---»--*-------------------------------------*--«---"
+
+judgement-days:  
+  started-broadcast:
+  - "&7&m---»--*-------------------------------------*--«---"
+  - "&bᴅᴏʀᴀʏᴀᴋɪᴍᴄ Judgement Day v1 ha avuto inizio..."
+  - "&7&m---»--*-------------------------------------*--«---"  
+  ended-broadcast:
+  - "&7&m---»--*-------------------------------------*--«---"
+  - "&cIl Judgement Day è terminato... %amount% giocatori sono stati puniti."
+  - "&7&m---»--*-------------------------------------*--«---"  
+  commands:
+  - "ban %player% &c[Vulcan] Judgement Day v1"  
+  broadcast:
+  - '&7&m---»--*-------------------------------------*--«---'
+  - '&c%player% &7è stato bannato per &c[Vulcan] Judgement Day v1&7.'
+  - '&7&m---»--*-------------------------------------*--«---'  
+  cooldown: 1000  
+  run-at-interval: false  
+  interval: 36000
+
+freeze:  
+  logged-out-while-frozen-commands: []
+
+join-message:  
+  enabled: false  
+  message:
+  - ''
+  - '&4&lᴀᴛᴛᴇɴᴢɪᴏɴᴇ &cIl butterfly clicking è fortemente sconsigliato e potrebbe causare un ban!'
+  - ''
+
+kick-alert-messages:  
+  enabled: true  
+  messages:    
+    flying-not-enabled: '%prefix% &c%player% &7è stato espulso per &bIl volo non è abilitato&7!'    
+    invalid-move-packet: '%prefix% &c%player% &7è stato espulso per &bPacchetto di movimento non valido&7!'    
+    too-many-packets: '%prefix% &c%player% &7è stato espulso per &bTroppi pacchetti&7!'
+
+gui:  
+  title: 'Vulcan AntiCheat'
+
+ghost-blocks-fix:  
+  enabled: true  
+  ghost-water-fix: true  
+  buffer:    
+    max: 3    
+    decay: .1  
+  setback: true  
+  update-blocks: false  
+  ticks: 3  
+  message-enabled: false  
+  message: '&cStavi camminando su un blocco fantasma ed è stato aggiornato!'  
+  staff-message-enabled: true  
+  staff-message: '%prefix% &cLa posizione di &c%player% &7è stata aggiornata per un blocco fantasma! (%world%, %x%, %y%, %z%) &7[%ticks%]'  
+  print-to-console: true  
+  console-message: 'La posizione di %player% è stata aggiornata per un blocco fantasma! (%world%, %x%, %y%, %z%) &7[%ticks%]'
+
+messages:  
+  no-permission: '&cNon hai il permesso per eseguire questo comando!'  
+  cant-execute-from-console: '&cNon puoi eseguire questo comando dalla console!'  
+  ban-command-syntax: '%prefix% &7Sintassi corretta: &c/vulcan ban (giocatore)&7.'  
+  kb-command-syntax: '%prefix% &7Sintassi corretta: &c/vulcan knockback (giocatore) &8| &c/vulcan kb (giocatore)&7.'  
+  profile-command-syntax: '%prefix% &7Sintassi corretta: &c/vulcan profile (giocatore)&7.'  
+  jday-command-syntax: '%prefix% &7Sintassi corretta: &c/jday add (giocatore) &8| &c/jday execute &8| &c/jday list &8| &c/jday remove (giocatore)&7.'  
+  reload-success: '%prefix% &aVulcan ricaricato con successo!'  
+  invalid-target: '%prefix% &cIl giocatore specificato non è stato trovato!'  
+  kb-test-success: '%prefix% &aTest di contraccolpo eseguito con successo su %player%!'  
+  jday-no-pending-bans: '%prefix% &cNon ci sono ban in sospeso!'  
+  jday-added-to-list: '%prefix% &c%player% &7è stato aggiunto con successo alla lista!'  
+  reset-command: '%prefix% &7Le violazioni per tutti i giocatori online sono state azzerate!'  
+  no-next-page: '%prefix% &cNon c''è una pagina successiva!'  
+  no-previous-page: '%prefix% &cNon c''è una pagina precedente!'  
+  enabled-all-checks: '%prefix% &aTutti i controlli sono stati attivati!'  
+  disabled-all-checks: '%prefix% &cTutti i controlli sono stati disattivati!'  
+  enabled-all-punishments: '%prefix% &aTutte le punizioni sono state attivate!'  
+  disabled-all-punishments: '%prefix% &cTutte le punizioni sono state disattivate!'  
+  disabled-check: '%prefix% &cControllo %check% disattivato!'  
+  enabled-check: '%prefix% &aControllo %check% attivato!'  
+  disabled-punishment: '%prefix% &cPunizione per il controllo %check% disattivata!'  
+  enabled-punishment: '%prefix% &aPunizione per il controllo %check% attivata!'  
+  disabled-hotbar-shuffle: '%prefix% &cMix hotbar per %check% disattivato!'  
+  enabled-hotbar-shuffle: '%prefix% &aMix hotbar per %check% attivato!'  
+  disabled-random-rotation: '%prefix% &cRotazione casuale per %check% disattivata!'  
+  enabled-random-rotation: '%prefix% &aRotazione casuale per %check% attivata!'  
+  disabled-broadcast-punishment: '%prefix% &cBroadcast punizione per %check% disattivato!'  
+  enabled-broadcast-punishment: '%prefix% &aBroadcast punizione per %check% attivato!'  
+  must-be-an-integer: '&cDeve essere un numero intero!'  
+  must-be-positive: '&cDeve essere positivo!'  
+  must-be-number: '&cDeve essere un numero!'  
+  set-max-buffer: '%prefix% &aBuffer massimo impostato a %value% per %check%!'  
+  set-hotbar-shuffle-minimum-violations: '%prefix% &aViolazioni minime per mix hotbar impostate a %value% per %check%!'  
+  set-hotbar-shuffle-interval: '%prefix% &aIntervallo mix hotbar impostato a %value% per %check%!'  
+  set-random-rotation-minimum-violations: '%prefix% &aViolazioni minime per rotazione casuale impostate a %value% per %check%!'  
+  set-random-rotation-interval: '%prefix% &aIntervallo rotazione casuale impostato a %value% per %check%!'  
+  set-alert-interval: '%prefix% &aIntervallo avvisi impostato a %value% per %check%!'  
+  set-buffer-decay: '%prefix% &aDecadimento buffer impostato a %value% per %check%!'  
+  set-buffer-multiple: '%prefix% &aMoltiplicatore buffer impostato a %value% per %check%!'  
+  set-max-violations: '%prefix% &aViolazioni massime impostate a %value% per %check%!'  
+  set-minimum-violations-to-alert: '%prefix% &aViolazioni minime per l''avviso impostate a %value% per %check%!'  
+  set-maximum-ping: '%prefix% &aPing massimo impostato a %value% per %check%!'  
+  set-minimum-tps: '%prefix% &aTPS minimo impostato a %value% per %check%!'  
+  removed-punishment-command: '%prefix% &aComando %command% rimosso dal controllo %check%!'  
+  invalid-index-number: '%prefix% &cNumero di indice non valido!'  
+  stopped-editing-punishment-commands: '%prefix% &cModifica dei comandi di punizione interrotta!'  
+  added-punishment-command: '%prefix% &aComando %command% aggiunto al controllo %check%!'  
+  enter-punishment-command: '%prefix% &aInserisci il comando che vuoi aggiungere! Digita STOP o CANCEL per uscire!'  
+  remove-punishment-command: '%prefix% &cInserisci l''indice del comando da rimuovere. Digita STOP o CANCEL per uscire!'  
+  disable-check-command-syntax: '%prefix% &cSintassi corretta: /vulcan disablecheck (nome controllo) - maiuscole/minuscole sensibili.'  
+  invalid-check: '%prefix% &cNome del controllo non valido! Esempi: AimA, BadPacketsF, AutoClickerJ.'  
+  removed-check: '%prefix% &cControllo %check% disattivato!'  
+  violations-command-syntax: '%prefix% &cSintassi corretta: /vulcan violations (giocatore)'  
+  no-logs: '%prefix% &cQuesto giocatore non ha registrato alcun log!'  
+  cps-command-syntax: '%prefix% &cSintassi corretta: /vulcan cps (giocatore)'  
+  connection-command-syntax: '%prefix% &cSintassi corretta: /vulcan connection (giocatore)'  
+  logs-command-syntax: '%prefix% &cSintassi corretta: /logs (giocatore) (pagina)'  
+  no-logs-file: '%prefix% &cNon esiste alcun file di log!'  
+  logs-command-no-logs: '%prefix% &cNessun log trovato per %player%!'  
+  no-page: '%prefix% &cNon esiste la pagina %page% per %player%!'  
+  update-available: '%prefix% &7È disponibile un nuovo aggiornamento per &bᴅᴏʀᴀʏᴀᴋɪᴍᴄ &7! (&cv%new-version%&7)'  
+  latest-version: '%prefix% &aStai eseguendo l''ultima versione!'  
+  injection-failure: 'Sei entrato troppo velocemente. Riprova!'  
+  frozen: '&cSei bloccato! Attendi le istruzioni dello staff.'  
+  logged-out-while-frozen: '%prefix% &c%player% è uscito dal server mentre era bloccato!'  
+  froze: '%prefix% &7Hai bloccato &a%player%&7!'  
+  unfroze: '%prefix% &7Hai sbloccato &c%player%&7!'  
+  freeze-command-syntax: '%prefix% &cSintassi corretta: /vulcan freeze (giocatore)'  
+  shuffle-command-syntax: '%prefix% &cSintassi corretta: /vulcan shuffle (giocatore)'  
+  shuffled-hotbar: '%prefix% &aHotbar mescolata con successo per %player%!'  
+  rotate-command-syntax: '%prefix% &cSintassi corretta: /vulcan rotate (giocatore)'  
+  randomly-rotated: '%prefix% &aRotato casualmente %player% con successo!'  
+  reset-command-syntax: '%prefix% &cSintassi corretta: /vulcan reset (giocatore)'  
+  violations-reset: '%prefix% &aViolazioni azzerate con successo per %player%!'  
+  unknown-command: '%prefix% &cComando sconosciuto!'  
+  unfroze-staff-broadcast: '%prefix% &c%player% &7è stato sbloccato da &c%staff%&7!'  
+  froze-staff-broadcast: '%prefix% &c%player% &7è stato bloccato da &c%staff%&7!'  
+  removed-from-jday: '%prefix% &aRimosso con successo %player% dal Judgement Day!'  
+  jday-remove-syntax: '%prefix% &cSintassi corretta: /jday remove (giocatore)'  
+  punishlogs-syntax: '%prefix% &cSintassi corretta: /punishlogs (giocatore)'
+
+commands:  
+  help:
+  - "&7&m---»--*-------------------------------------*--«---"
+  - "&bᴅᴏʀᴀʏᴀᴋɪᴍᴄ Cheat Detection v%version%"
+  - "&r"
+  - "&c/vulcan help &8- &7Apre questo menu di aiuto"
+  - "&c/vulcan menu &8| &c/vulcan gui &8- &7Apre la GUI di Vulcan"
+  - "&c/vulcan profile &8 - &7Mostra il profilo Vulcan di un giocatore."
+  - "&c/vulcan ban (giocatore) &8- &7Banna un giocatore tramite Vulcan."
+  - "&c/vulcan reload &8- &7Ricarica tutti i file."
+  - "&c/vulcan disablecheck (controllo) &8- &7Disattiva un controllo."
+  - "&c/vulcan violations (giocatore) &8- &7Mostra tutte le violazioni del giocatore."
+  - "&c/vulcan cps (giocatore) &8- &7Mostra i CPS del giocatore."
+  - "&c/vulcan kb (giocatore) &8 | &c/vulcan knockback (giocatore) &8- &7Applica contraccolpo."
+  - "&c/vulcan checks &8- &7Mostra tutti i controlli attivi."
+  - "&c/vulcan connection (giocatore) &8- &7Mostra le info di connessione del giocatore."
+  - "&c/vulcan freeze (giocatore) &8- &7Congela/scongela un giocatore."
+  - "&c/vulcan rotate (giocatore) &8- &7Ruota casualmente yaw/pitch."
+  - "&c/vulcan shuffle (giocatore) &8- &7Mescola casualmente la hotbar."
+  - "&c/vulcan top &8- &7Mostra i giocatori con più violazioni."
+  - "&r"
+  - "&c/jday add (nome) &8- &7Aggiunge un giocatore al Judgement Day."
+  - "&c/jday execute &8- &7Esegue un Judgement Day."
+  - ""
+  - "&c/verbose &8- &7Attiva/disattiva le notifiche verbose."
+  - "&c/alerts &8- &7Attiva/disattiva gli avvisi di cheat."
+  - "&7&m---»--*-------------------------------------*--«---"  
+  ban:    
+    commands:
+    - 'ban %player% &c[Vulcan] Vantaggio scorretto'    
+    broadcast:
+    - "&7&m---»--*-------------------------------------*--«---"
+    - "&bᴅᴏʀᴀʏᴀᴋɪᴍᴄ &7ha rilevato che &c%player% &7stava usando cheat e lo ha rimosso dal network."
+    - "&7&m---»--*-------------------------------------*--«---"  
+  profile:
+    - "&7&m---»--*-------------------------------------*--«---"
+    - "&cProfilo per %player%:"
+    - " &8» &7%uuid%"
+    - ""
+    - "&7Versione: &c%client-version%"
+    - "&7Client Brand: &c%client-brand%"
+    - "&7Sensibilità: &c%sensitivity%%"
+    - "&7Ultimi CPS: &c%cps% CPS"
+    - ""
+    - "&7Violazioni Totali (&c%total-violations%&7):"
+    - " &8» &7Combattimento: &c%combat-violations%"
+    - " &8» &7Movimento: &c%movement-violations%"
+    - " &8» &7Giocatore: &c%player-violations%"
+    - ""
+    - "&7Collisioni:"
+    - "&8» &7Blocchi Vicini: %nearby-blocks%"
+    - "&8» &7Entità Vicine: %nearby-entities%"
+    - ""
+    - "&7Effetti Pozione: %potion-effects%"
+    - "&7&m---»--*-------------------------------------*--«---"  
+  cps: "%prefix% &7CPS per &c%player%&7: &c%cps%"  
+  connection:
+    - "&7&m---»--*-------------------------------------*--«---"
+    - "&cInformazioni di connessione per %player%:"
+    - ""
+    - "&7Ping Transaction: &c%transaction-ping%ᴍꜱ"
+    - "&7Ping KeepAlive: &c%keepalive-ping%ᴍꜱ"
+    - ""
+    - "&7Ultima Transaction risposta: &c%last-replied-transaction%ᴍꜱ fa"
+    - "&7Transaction in coda: &c%queued-transactions%"
+    - ""
+    - "&7Ritardo Volo (Flying Delay): &c%flying-delay%ᴍꜱ"
+    - "&7&m---»--*-------------------------------------*--«---"  
+  logs:    
+    color: '&7'    
+    header-footer: '&7&m---»--*--&r&7[ Log per &c%player% &7(&c%page%&8/&c%max-pages%&7) &7]&7&m--*--«---'  
+  top:
+    - "&7&m---»--*-------------------------------------*--«---"
+    - "&cTop Violazioni Totali:"
+    - " &8- &7%total-1-name% &7(&c%total-1-violations% ᴠʟ&7)"
+    - " &8- &7%total-2-name% &7(&c%total-2-violations% ᴠʟ&7)"
+    - " &8- &7%total-3-name% &7(&c%total-3-violations% ᴠʟ&7)"
+    - " &8- &7%total-4-name% &7(&c%total-4-violations% ᴠʟ&7)"
+    - " &8- &7%total-5-name% &7(&c%total-5-violations% ᴠʟ&7)"
+    - ""
+    - "&cTop Violazioni Combattimento:"
+    - " &8- &7%combat-1-name% &7(&c%combat-1-violations% ᴠʟ&7)"
+    - " &8- &7%combat-2-name% &7(&c%combat-2-violations% ᴠʟ&7)"
+    - " &8- &7%combat-3-name% &7(&c%combat-3-violations% ᴠʟ&7)"
+    - " &8- &7%combat-4-name% &7(&c%combat-4-violations% ᴠʟ&7)"
+    - " &8- &7%combat-5-name% &7(&c%combat-5-violations% ᴠʟ&7)"
+    - ""
+    - "&cTop Violazioni Movimento:"
+    - " &8- &7%movement-1-name% &7(&c%movement-1-violations% ᴠʟ&7)"
+    - " &8- &7%movement-2-name% &7(&c%movement-2-violations% ᴠʟ&7)"
+    - " &8- &7%movement-3-name% &7(&c%movement-3-violations% ᴠʟ&7)"
+    - " &8- &7%movement-4-name% &7(&c%movement-4-violations% ᴠʟ&7)"
+    - " &8- &7%movement-5-name% &7(&c%movement-5-violations% ᴠʟ&7)"
+    - ""
+    - "&cTop Violazioni Giocatore:"
+    - " &8- &7%player-1-name% &7(&c%player-1-violations% ᴠʟ&7)"
+    - " &8- &7%player-2-name% &7(&c%player-2-violations% ᴠʟ&7)"
+    - " &8- &7%player-3-name% &7(&c%player-3-violations% ᴠʟ&7)"
+    - " &8- &7%player-4-name% &7(&c%player-4-violations% ᴠʟ&7)"
+    - " &8- &7%player-5-name% &7(&c%player-5-violations% ᴠʟ&7)"
+    - "&7&m---»--*-------------------------------------*--«---"  
+  jday:    
+    list-header-footer: "&7&m---»--*-------------------------------------*--«---"    
+    list-format: " &8- &7%name%"  
+  punishlogs:    
+    header-footer: '&7&m---»--*--&r&7[ Log Punizioni per &c%player% &7]&7&m--*--«---'
+
+punishment-statistics-broadcast:  
+  enabled: false  
+  interval: 18000  
+  broadcast:
+  - '&7&m---»--*-------------------------------------*--«---'
+  - '&7Negli ultimi 7 giorni, &bᴅᴏʀᴀʏᴀᴋɪᴍᴄ &7ha punito &c%amount% &7giocatori.'
+  - '&7&m---»--*-------------------------------------*--«---'
+
+settings:  
+  toggle-alerts-on-join: true  
+  per-check-severities: true  
+  cinematic: false  
+  debug: true  
+  check-for-updates: true  
+  inject-early: true  
+  max-velocity-ticks: 50  
+  max-logs-file-size: 7500  
+  server-name: 'Default'  
+  async-alerts: false  
+  enable-api: false  
+  update-checker: true  
+  punishment-delay: 10000  
+  ignore-floodgate: true  
+  ignore-flags-geyser-client-brand: false  
+  join-check-wait-time: 2500  
+  ignore-geyser-uuids: true  
+  ignore-geyser-prefixes: true  
+  ignore-geyser-prefix: "*"  
+  max-alert-violation: 250  
+  flight-cooldown: 40  
+  top-command-unresolved: "Non risolto"  
+  ignore-if-in-judgement-day: false  
+  ignore-vivecraft: false  
+  lenient-scaffolding: true  
+  server-lag-spike: false  
+  bstats: true  
+  entity-collision: true  
+  hook-mcmmo: true  
+  hook-mythicmobs: true
